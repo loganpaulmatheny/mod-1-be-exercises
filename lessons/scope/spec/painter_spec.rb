@@ -15,10 +15,9 @@ RSpec.describe Painter do
     expect(painter.name).to eq("Bob Ross")
   end
 
-  xit 'test_it_has_a_name2' do
+  it 'test_it_has_a_name2' do
     painter = Painter.new("Bob Ross")
-
-    expect(@name).to eq("Bob Ross")
+    expect(painter.name).to eq("Bob Ross")
   end
 
   xit 'test_it_has_a_name3' do
