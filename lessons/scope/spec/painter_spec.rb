@@ -1,17 +1,17 @@
-require './lib/painter'
-require './lib/paint'
+require 'rspec'
+require './lib/painter.rb'
 
-describe Painter do
+RSpec.describe Painter do
+  before(:each) do 
+    @the_painters_name = "Bob Ross"
+  end 
   it 'test_it_exists' do
-    the_painters_name = "Bob Ross"
-    painter = Painter.new(the_painters_name)
-
+    painter = Painter.new(@the_painters_name)
     expect(painter).to be_a(Painter)
   end
 
-  xit 'test_it_has_a_name1' do
-    painter = Painter.new(the_painters_name)
-
+  it 'test_it_has_a_name1' do
+    painter = Painter.new(@the_painters_name)
     expect(painter.name).to eq("Bob Ross")
   end
 

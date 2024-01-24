@@ -1,5 +1,4 @@
 class Painter
-
   attr_reader :name
 
   def initialize(name)
