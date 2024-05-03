@@ -10,8 +10,10 @@ cities_lived_in = {
 # Get a unique list of all of the cities that these humans have lived in  
 # ["Philadelphia", "Fort Collins", "Seattle", "Denver", "Santa Fe", "Portland", "Lansing", "Columbus", "Austin"]
 
+# cities_list = cities_lived_in.values.flatten.uniq
+cities_list = cities_lived_in.values.flatten
 
-
+print cities_list
 
 # Problem #2: 
 # Write code that iterates through the `cities_lived_in` hash, and returns a list of  
@@ -21,6 +23,8 @@ cities_lived_in = {
 # or
 # ["Michaela", "Mike", "Alex"]
 
+humans_in_city = cities_lived_in.keys.map {|key| key.to_s.capitalize}
+puts humans_in_city
 
 
 
@@ -38,3 +42,10 @@ cities_lived_in = {
 #     "Columbus => 1,
 #     "Austin" => 1
 # }
+
+# flatten the cities into an array - not unique 
+# iterate through and create keys in an object (if none exists)
+# if the key exists, add one 
+
+cities_population = cities_lived_in.values.flatten.group_by(&:itself).transform_values(&:count)
+p cities_population

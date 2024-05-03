@@ -7,5 +7,6 @@ fridge_items_1 = ["milk", "eggs", "eggs","eggs", "eggs",
 
 # 1. What is problematic about listing `fridge_items_1`
 # as an array structured grocery list?
+# there's items that there are clearly multiple of
 
 # 2. What might be a more readable way to structure this?
